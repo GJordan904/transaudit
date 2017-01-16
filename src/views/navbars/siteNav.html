@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-logo">
+            <img src="img/logoWhite.png">
+        </div>
+
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li ui-sref-active="active"><a ui-sref="app.home">Home</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.about">About</a></li>
+                <li ui-sref-active="active"><a ui-sref=".services">Services</a></li>
+                <li ui-sref-active="active"><a ui-sref=".contact">Contact</a></li>
+            </ul>
+            <nav-login></nav-login>
+        </div>
+        <div ng-click="navW.toggleNav()" class="nav-toggle"><i class="fa fa-bars fa-2x"></i></div>
+    </div>
+</nav>

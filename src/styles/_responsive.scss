@@ -1,0 +1,25 @@
+.hidden-xs {
+  @media (max-width: $screen-xs) {
+    display: none;
+  }
+}
+.hidden-sm {
+  @media (min-width: $screen-xs) and (max-width: $screen-sm) {
+    display: none;
+  }
+}
+.hidden-md {
+  @media (min-width: $screen-sm) and (max-width: $screen-md) {
+    display: none;
+  }
+}
+.hidden-lg {
+  @media (min-width: $screen-md) and (max-width: $screen-lg) {
+    display: none;
+  }
+}
+.hidden-xl {
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+}

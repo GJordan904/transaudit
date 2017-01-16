@@ -1,0 +1,112 @@
+
+
+// Colors
+$brand-primary:               #1B1B1E;
+$brand-secondary:             #6D676E;
+$brand-success:               #183A37;
+$brand-warning:               #EFD6AC;
+$brand-danger:                #DB5461;
+$brand-white:                 #FFEDDF;
+$brand-blue:                  #01BAEF;
+
+// Scaffolding
+$body-bg:                     $brand-primary;
+$text-color:                  $brand-white;
+$link-color:                  $brand-blue;
+$link-hover-color:            lighten($brand-blue, 25%);
+
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Share+Tech+Mono|Titillium+Web');
+$font-sans-serif:             'Titillium Web', Helvetica, Arial, sans-serif;
+$font-serif:                  'Josefin Slab', Georgia, Times, serif;
+$font-monospace:              'Share Tech Mono', Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$headings-font-family:        $font-serif;
+$headings-color:              $brand-danger;
+$headings-line-height:        1.1;
+
+$font-size-base:              1em;
+$font-size-large:             1.50em;
+$font-size-small:             .75em;
+$font-size-xsmall:            .5em;
+
+$font-size-h1:                2.75em;
+$font-size-h2:                2.5em;
+$font-size-h3:                2.25em;
+$font-size-h4:                1.75em;
+$font-size-h5:                $font-size-large;
+$font-size-h6:                $font-size-base;
+
+$line-height-base:            1.428571429;
+$line-height-comp:            floor(($font-size-base * $line-height-base));
+$line-height-large:           1.3333333;
+$line-height-small:           1.5;
+
+// Padding
+$padding-base-vert:           .375em;
+$padding-base-hori:           .75em;
+
+$padding-large-vert:          .625em;
+$padding-large-hori:          1em;
+
+$padding-small-vert:          .25em;
+$padding-small-hori:          .5em;
+
+// Border Radius
+$border-radius-base:          4px;
+$border-radius-large:         6px;
+$border-radius-small:         3px;
+
+// Grid and Breakpoints
+$screen-xs:                   480px;
+$screen-sm:                   768px;
+$screen-md:                   992px;
+$screen-lg:                   1200px;
+$screen-xl:                   1400px;
+
+$grid-columns:                12;
+$gutter-width:                30px;
+$grid-breakpoint:             $screen-sm;
+
+// Box Shadows
+$bottom-shadow:               0 10px 5px -5px rgba(0,0,0,0.5);
+$all-shadow:                  0px 0px 10px 0px rgba(0,0,0,0.5);
+
+// Navbar
+$navbar-height:              3.125em;
+$navbar-bg:                  $brand-primary;
+$navbar-padding-horizontal:  floor($gutter-width / 2);
+$navbar-padding-vertical:    (($navbar-height  - $line-height-comp) / 2);
+$navbar-link-font-size:      1.25em;
+
+// Buttons
+$btn-font-weight:            500;
+
+// Forms
+$input-color:                $brand-white;
+$input-bg:                   $brand-primary;
+$input-bg-disabled:          $brand-secondary;
+
+$input-border:               groove 2px #DB5461;
+$input-border-radius:        $border-radius-base;
+$input-border-radius-small:  $border-radius-small;
+$input-border-radius-large:  $border-radius-large;
+$input-border-focus:         $brand-secondary;
+
+$input-height-base:          ($line-height-base + ($padding-base-vert * 2));
+$input-height-small:         (floor($font-size-small * $line-height-small) + ($padding-small-vert * 2));
+$input-height-large:         (ceil($font-size-large * $line-height-large) + ($padding-large-vert * 2));
+
+$form-group-margin-bottom:    15px;
+
+$state-success-text:          #3c763d;
+$state-success-bg:            #dff0d8;
+
+$state-warning-text:          #8a6d3b;
+$state-warning-bg:            #fcf8e3;
+
+$state-danger-text:           #a94442;
+$state-danger-bg:             #f2dede;
+
+$cursor-disabled:             not-allowed;
