@@ -20,18 +20,18 @@
         text-shadow: 3px 2px 2px rgba(150, 150, 150, 1);
       }
       &.text {
-        font-size: 3em;
+        font-size: 2.55em;
         vertical-align: bottom;
         animation: fadeIn 1s;
       }
       &.smallText {
-        font-size: 1em;
-        animation: fadeIn 5s;
+        font-size: .85em;
+        animation: fadeIn 4s;
       }
       &.red, &.yellow, &.green {
         display: inline-block;
-        height: 4.5em;
-        width: 4.5em;
+        height: 3.83em;
+        width: 3.83em;
       }
       &.red {
         background-color: #ff0000;
@@ -47,33 +47,45 @@
         animation: fadeIn 4s;
       }
     }
-  }
-  @media (max-width: $screen-lg) {
 
-    div {
-      font-size: 1em;
-    }
-  }
-  @media (max-width: $screen-md) {
-
-  }
-  @media (max-width: $screen-sm) {
-
-    div {
-      font-size: .75em;
-    }
-
-    #text5 {
-      left: 0;
-      transform: translateY(-50%);
-      width: 95%;
-      margin-left: 10%;
+    @media (max-width: $screen-lg) {
+      transform: scale(.75) translate(-50%, -50%);
+      width: 100%;
 
       span {
+        &.smallText {
+          font-size: .65em;
+        }
         &.text {
-          font-size: 2.75em;
+          font-size: 1.95em;
+        }
+        &.red, &.yellow, &.green {
+          display: inline-block;
+          height: 2.93em;
+          width: 2.93em;
         }
       }
     }
+
+    @media (max-width: $screen-xs) {
+      left: 0;
+      transform: scale(0.65) translateY(-50%);
+
+      span {
+        &.text {
+          font-size: 1.35em;
+        }
+        &.smallText {
+          display: block;
+          font-size: .75em;
+        }
+        &.red, &.yellow, &.green {
+          display: inline-block;
+          height: 2.65em;
+          width: 2.65em;
+        }
+      }
+    }
+
   }
 }

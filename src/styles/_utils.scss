@@ -61,6 +61,11 @@
   right: 0;
   color: $brand-danger;
 }
+.nav-top {
+  width: 5%;
+  margin: 0 auto;
+  color: $brand-danger;
+}
 .rounded-corners {
   border-radius: 5px;
 }
@@ -68,10 +73,20 @@
   font-size: 4em;
   color: $brand-danger;
 
+  &.double {
+    transform: scale(2);
+
+    @media(max-width: $screen-sm) {
+      transform: scale(1.5);
+    }
+  }
   span {
     font-size: .5em;
     display: block;
     color: $brand-white;
+  }
+  @media(max-width: $screen-xs) {
+    font-size: 2.25em;
   }
 }
 .hidden {
@@ -79,4 +94,7 @@
 }
 .v-space {
   height: 150px;
+}
+#map-canvas {
+  height: 100%;
 }

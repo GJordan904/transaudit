@@ -1,0 +1,76 @@
+.footer {
+  border-top: 2px solid lighten($brand-danger, 25%);
+  background-color: $brand-primary;
+  text-align: center;
+
+  h4 {
+    margin: 0 0 .25em 0;
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 0 .5em 0;
+    padding: 0;
+  }
+
+  a {
+    color: $brand-warning;
+
+    &:visited {
+      color: $brand-warning;;
+    }
+  }
+
+}
+.sub-footer {
+  background-color: $brand-danger;
+  color: $brand-primary;
+  text-align: center;
+
+  .row {
+    padding: .75em .35em;
+  }
+  .abn {
+    float: left;
+  }
+  .site-by {
+    float: right;
+  }
+  a {
+    color: $brand-warning;
+
+    &:visited {
+      color: $brand-warning;;
+    }
+  }
+  &.home {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba($brand-danger, .45);
+    color: $brand-white;
+    z-index: 3;
+  }
+}
+.footer-form {
+  text-align: center;
+
+  input {
+    text-align: center;
+    display: block;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $brand-danger;
+    width: 75%;
+    margin: 0 auto;
+    color: $brand-white;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    margin-top: .75em;
+  }
+}

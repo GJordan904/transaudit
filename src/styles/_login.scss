@@ -1,0 +1,68 @@
+/*
+ *
+ * Sidebar Login
+ *
+ */
+.sidebar-login {
+  position: fixed;
+  top: 30%;
+  left: -100%;
+  padding: 1em;
+  background-color: rgba($brand-success, .50);
+  z-index: 3;
+  transition: all 1s;
+  border-bottom-right-radius: 10px;
+
+  .title, .form {
+    opacity: 0;
+    animation: fadeOut .5s;
+  }
+
+  .form {
+    text-align: center;
+    .input-group {
+      margin: 1em 0;
+    }
+    .login-input {
+      display: inline-block;
+      border: groove 2px #DB5461;
+      background-color: $brand-primary;
+      color: $brand-white;
+      width: 75%;
+      border-radius: 5px;
+      text-align: center;
+    }
+  }
+
+  &.show {
+
+    .title, .form {
+      opacity: 1;
+      animation: fadeIn 2s;
+    }
+  }
+
+  @media(max-width: $screen-xs) {
+    top: 15%;
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+  }
+}
+
+.login-btn {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 5;
+  background-color: rgba($brand-success, .75);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all 1s;
+
+  @media(max-width: $screen-xs) {
+    top: 15%;
+  }
+}

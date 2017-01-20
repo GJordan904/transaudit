@@ -109,4 +109,7 @@ $state-warning-bg:            #fcf8e3;
 $state-danger-text:           #a94442;
 $state-danger-bg:             #f2dede;
 
+$legend-color:                $brand-secondary;
+$legend-border-color:         darken($brand-secondary, 15%);
+
 $cursor-disabled:             not-allowed;

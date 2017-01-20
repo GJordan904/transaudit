@@ -7,10 +7,18 @@ angular.module('app', [
     'ngAnimate',
     'duScroll',
     'angular-inview',
-    'anim-in-out'
+    'anim-in-out',
+    'angular-gmap-gplace'
 ])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $aggMapProvider) {
+    $aggMapProvider.setOptions({
+        lang: 'en-US',
+        key: 'AIzaSyCUmYH5tWFnfSu-Q8A2kRF7VzXo9KfyU9g',
+        libs: '',
+        loadFontAwesome: false
+    });
+
     $stateProvider
         .state('app', {
             url: '',
@@ -22,12 +30,14 @@ angular.module('app', [
             url: '/home',
             views: {
                 'navbar': {
-                    templateUrl: 'views/navbars/homeNav.html',
-                    controller: 'NavCtrl as nav'
+                    templateUrl: 'views/partials/homeNav.html'
                 },
                 'mainContent': {
                     templateUrl: 'views/home.html',
                     controller: 'HomeCtrl as home'
+                },
+                'footer': {
+                    templateUrl: 'views/partials/homeFooter.html'
                 }
             }
         })
@@ -35,13 +45,48 @@ angular.module('app', [
             url: '/about',
             views: {
                 'navbar': {
-                    templateUrl: 'views/navbars/siteNav.html',
-                    controller: 'NavCtrl as nav'
+                    templateUrl: 'views/partials/siteNav.html'
                 },
                 'mainContent': {
                     templateUrl: 'views/about.html',
                     controller: 'AboutCtrl as about'
+                },
+                'footer': {
+                    templateUrl: 'views/partials/footer.html'
                 }
+            }
+        })
+        .state('app.services', {
+            url: '/services',
+            views: {
+                'navbar': {
+                    templateUrl: 'views/partials/siteNav.html'
+                },
+                'mainContent': {
+                    templateUrl: 'views/services.html',
+                    controller: 'ServCtrl as serv'
+                },
+                'footer': {
+                    templateUrl: 'views/partials/footer.html'
+                }
+            }
+        })
+        .state('app.contact', {
+            url: '/contact',
+            views: {
+                'navbar': {
+                    templateUrl: 'views/partials/siteNav.html'
+                },
+                'mainContent': {
+                    templateUrl: 'views/contact.html',
+                    controller: 'ContCtrl as cont'
+                },
+                'footer': {
+                    templateUrl: 'views/partials/footer.html'
+                }
+            },
+            resolve: {
+                google: '$aggMap'
             }
         });
 

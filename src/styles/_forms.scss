@@ -535,3 +535,31 @@ input[type="checkbox"] {
     }
   }
 }
+
+.contact-form {
+
+  input {
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: .75em;
+    background-color: lighten($brand-primary, 25%);
+    color: $brand-white
+  }
+  .message {
+    height: 250px;
+  }
+  button {
+    display: block;
+    width: 100%;
+  }
+  ul {
+    list-style: none;
+  }
+  i {
+    margin-right: .75em;
+  }
+  a {
+    vertical-align: super;
+  }
+}

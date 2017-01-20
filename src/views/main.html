@@ -1,38 +1,24 @@
-<header>
-    <nav-wrapper>
-        <div id="cLogin" class="navbar-login " ng-switch="navW.loginType">
-            <div class="title">
-                <h1 ng-switch-when="customer">Customer Login</h1>
-                <h1 ng-switch-when="employee">Employee Login</h1>
-            </div>
-            <div class="form">
-                <div class="input-group">
-                    <input class="login-input" type="text" id="username" placeholder="Username">
-                </div>
-
-                <div class="input-group">
-                    <input class="login-input" type="password" id="password" placeholder="Password">
-                </div>
-
-                <button class="btn btn-danger rounded-corners" ng-switch-when="customer">Login</button>
-                <button class="btn btn-danger rounded-corners" ng-switch-when="employee">Test</button>
-            </div>
+<header ng-controller="NavCtrl as nav">
+    <!-- Mobile Nav -->
+    <nav class="mobile-navbar hide" ng-class="{hide: nav.hideNav}">
+        <div class="mobile-logo">
+            <img src="img/logoWhite.png" class="vertical-responsive">
         </div>
-        <nav class="mobile-navbar hide" ng-class="{hide: navW.hideNav}">
-            <div class="mobile-login">
+        <ul class="mobile-nav">
+            <li ui-sref-active="active"><a ui-sref="app.home" ng-click="nav.toggleNav()">Home</a></li>
+            <li ui-sref-active="active"><a ui-sref="app.about" ng-click="nav.toggleNav()">About</a></li>
+            <li ui-sref-active="active"><a ui-sref=".services" ng-click="nav.toggleNav()">Services</a></li>
+            <li ui-sref-active="active"><a ui-sref=".contact" ng-click="nav.toggleNav()">Contact</a></li>
+        </ul>
+    </nav>
 
-            </div>
-            <ul class="mobile-nav">
-                <li ui-sref-active="active"><a ui-sref="app.home">Home</a></li>
-                <li ui-sref-active="active"><a ui-sref="app.about">About</a></li>
-                <li ui-sref-active="active"><a ui-sref=".services">Services</a></li>
-                <li ui-sref-active="active"><a ui-sref=".contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="navView" ui-view="navbar" class="anim-in-out anim-slide-below-fade"></div>
-    </nav-wrapper>
+    <div id="navView" ui-view="navbar" class="anim-in-out anim-slide-below-fade" data-anim-speed="500"></div>
 </header>
 
-<main ui-view="mainContent"></main>
+<main class="anim-in-out anim-slide-below-fade" ui-view="mainContent" data-anim-speed="500"></main>
+
+<aside>
+    <login></login>
+</aside>
 
 <footer ui-view="footer"></footer>

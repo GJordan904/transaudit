@@ -42,7 +42,7 @@
             ngtemplates: {
                 build: {
                     cwd: 'src',
-                    src: 'views/**.html',
+                    src: 'views/**/**.html',
                     dest: '.tmp/templates.js',
                     options: {
                         module: 'app',

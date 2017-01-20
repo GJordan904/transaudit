@@ -9,7 +9,8 @@
   position: relative;
   background: url("../img/electricalFiltered.jpg") no-repeat center;
   background-size: cover;
-  min-height: 75vh;
+  min-height: 100vh;
+  border-bottom: 2px solid lighten($brand-primary, 25%);
 }
 .sketch {
   background: url("../img/drawing.png") no-repeat center bottom;
@@ -21,4 +22,32 @@
   position: relative;
   background: url("../img/insideFiltered.jpg") no-repeat left;
   min-height: 100vh;
+}
+.sub-station {
+  position: relative;
+  background: url("../img/substationFiltered.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.workers {
+  position: relative;
+  background: url("../img/workersFiltered.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.two-workers {
+  position: relative;
+  background: url("../img/2workersFiltered.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.trans-box {
+  background-color: rgba($brand-success, .55);
+}
+.contact {
+
+  &.container {
+    padding-top: $navbar-height;
+    padding-left: 0;
+  }
 }
