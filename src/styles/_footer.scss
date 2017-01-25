@@ -2,6 +2,7 @@
   border-top: 2px solid lighten($brand-danger, 25%);
   background-color: $brand-primary;
   text-align: center;
+  padding-bottom: .5em;
 
   h4 {
     margin: 0 0 .25em 0;
@@ -22,6 +23,9 @@
     }
   }
 
+  @media(max-width: $screen-xs) {
+    font-size: .5em;
+  }
 }
 .sub-footer {
   background-color: $brand-danger;
@@ -51,6 +55,11 @@
     background-color: rgba($brand-danger, .45);
     color: $brand-white;
     z-index: 3;
+  }
+
+  @media(max-width: $screen-xs) {
+    font-size: .55em;
+    padding: 0 .75em;
   }
 }
 .footer-form {

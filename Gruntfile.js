@@ -31,10 +31,10 @@
                     singleQuotes: true
                 },
                 app: {
-                    files: [{
-                        src: '.tmp/concat/js/app.js',
-                        dest: '.tmp/concat/js/app.js'
-                    }]
+                    files: {
+                        '.tmp/concat/js/app.js': ['.tmp/concat/js/app.js'],
+                        '.tmp/concat/js/vendor.js': ['.tmp/concat/js/vendor.js']
+                    }
                 }
             },
 

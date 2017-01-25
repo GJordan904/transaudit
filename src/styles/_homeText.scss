@@ -48,28 +48,9 @@
       }
     }
 
-    @media (max-width: $screen-lg) {
-      transform: scale(.75) translate(-50%, -50%);
-      width: 100%;
-
-      span {
-        &.smallText {
-          font-size: .65em;
-        }
-        &.text {
-          font-size: 1.95em;
-        }
-        &.red, &.yellow, &.green {
-          display: inline-block;
-          height: 2.93em;
-          width: 2.93em;
-        }
-      }
-    }
-
     @media (max-width: $screen-xs) {
       left: 0;
-      transform: scale(0.65) translateY(-50%);
+      transform: scale(0.65) translateY(-75%);
 
       span {
         &.text {

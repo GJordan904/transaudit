@@ -8,11 +8,11 @@ angular.module('app', [
     'duScroll',
     'angular-inview',
     'anim-in-out',
-    'angular-gmap-gplace'
+    'angular-gmap-gplaces'
 ])
 
-.config(function($stateProvider, $urlRouterProvider, $aggMapProvider) {
-    $aggMapProvider.setOptions({
+.config(function($stateProvider, $urlRouterProvider, $aggLoaderProvider) {
+    $aggLoaderProvider.setOptions({
         lang: 'en-US',
         key: 'AIzaSyCUmYH5tWFnfSu-Q8A2kRF7VzXo9KfyU9g',
         libs: '',
@@ -86,7 +86,7 @@ angular.module('app', [
                 }
             },
             resolve: {
-                google: '$aggMap'
+                google: '$aggLoader'
             }
         });
 
